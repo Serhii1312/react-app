@@ -1,0 +1,41 @@
+.product_banner {
+    background-color: gainsboro;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product_img img {
+   max-width: 100%;
+}
+
+.product_value {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.product_price {
+    display: flex;
+    align-items: center;
+}
+
+.product_button {
+    padding: 5px 15px;
+    background-color: rgba(94, 20, 179, 0.85);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product_text {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.product_title {
+    text-align: center;
+}

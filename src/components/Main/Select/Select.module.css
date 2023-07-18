@@ -1,0 +1,38 @@
+.select_container {
+    position: absolute;
+    top: 1em;
+    right: 10em;
+    width: 130px;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: rgba(94, 20, 179, 0);
+    color: white;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.select_value {
+    font-size: 15px;
+    background-color: rgba(94, 20, 179, 0.85);
+}
+
+
+.shopping_cart {
+    position: absolute;
+    top: 1em;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.shopping_cart:hover {
+    box-shadow: 0 0 10px #fff;
+}
+

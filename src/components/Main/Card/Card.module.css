@@ -1,0 +1,97 @@
+.order_wrapper {
+    position: relative;
+    background-color:rgba(94, 20, 179, 0.85);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+
+.order_title {
+    color: white;
+}
+ 
+.close_wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.order_content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.order_img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.content_price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.remove_btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    color: red;
+    background: transparent;
+    box-shadow: 0 0 5px #FFf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.remove_btn:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.content_count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.content_count i{
+    cursor: pointer;
+}
+.content_count ::selection{
+    background: transparent;
+}
+
+
+
+.order_info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.content_name {
+    font-size: 25px;
+}
+
+.card_open {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    background: blur;
+    backdrop-filter: blur(5px);
+}
