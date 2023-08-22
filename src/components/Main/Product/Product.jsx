@@ -1,42 +1,48 @@
 import classes from './Product.module.css';
 import React from 'react';
-//import { useState, useEffect } from 'react';
-//import axios from 'axios';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-    {/*const src = "https://content.guardianapis.com/search?page=2&q=debate&api-key=test";
 
-    const [articles, setArticles] = useState([]);
-
-    useEffect(()=> {
-        axios
-            .get(src)
-            .then(data => {
-                setArticles(data.data.response.results);
-            })
-    }, []);*/}  
-
-    const Product = (props) => {
-    
+    const Product = ({product}) => {
+        
+    const settings = {
+        dots: true,
+        autoplay: true,
+        arrows: true
+    }   
     
     return (  
         <div className={classes.product} >
             <div className={classes.product_banner} >
                 <div className={classes.product_img}>
-                    <img src='https://progameguides.com/wp-content/uploads/2020/06/fortnite-outfit-jules.jpg?w=875'/>
+                {
+				product.displayAssets.length === 1 ?
+				<img src={product.displayAssets[0].full_background} alt=""  width='100%' />	:
+				<Slider {...settings}>
+					{
+						product.displayAssets.map(img=>{
+							return <img src={img.full_background} key={img.displayAsset} width='100%' />
+						})
+					}
+				</Slider>
+				}
                 </div>
+                
                  <div className={classes.product_info}>
                     <div className={classes.product_description}>
-                        <h2 className={classes.product_title}>{props.title}</h2>
-                        <p className={classes.product_text}>{props.text}</p>                       
+                        <h2 className={classes.product_title}>{product.displayName}</h2>
+                        <p className={classes.product_text}>{product.displayDescription}</p>                       
                     </div>
                     <div className={classes.product_value}>
                         <div className={classes.product_price}>
-                        {props.price}
+                        {product.price.regularPrice}
                         <span class="material-icons">
                                 attach_money
                         </span>
                         </div>
-                        <button className={classes.product_button}>Buy</button>
+                        <button className={classes.product_button}><i class="material-icons">add_shopping_cart</i>Buy</button>
                     </div>
                 </div>
             </div>

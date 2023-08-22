@@ -4,10 +4,13 @@
     border-radius: 10px;
     padding: 15px;
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 .order_title {
     color: white;
+    font-weight: 600;
+    padding: 7px 5px;
 }
  
 .close_wrapper {
@@ -33,7 +36,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .remove_btn {
@@ -56,13 +60,15 @@
 
 .content_count {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column    ;
   align-items: center;
-  gap: 5px;
 }
+
+
 .content_count i{
     cursor: pointer;
 }
+
 .content_count ::selection{
     background: transparent;
 }
@@ -81,17 +87,25 @@
     align-items: center;
     justify-content: center;
     padding-left: 10px;
-    font-size: 20px;
+}
+
+.price_title {
+    font-size: 22px;
+    padding: 10px 0px;
 }
 
 .content_name {
-    font-size: 25px;
+    font-size: 26px;
 }
 
 .card_open {
     display: block;
     position: fixed;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: blur;
     backdrop-filter: blur(5px);
+
 }

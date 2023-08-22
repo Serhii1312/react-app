@@ -10,11 +10,9 @@ const Card = ({open, setOpen}) => {
     }
 
     let onClickDown = () => {
-        setCount(count - 1);
+    return count > 1 ? setCount(count - 1) : null
     }
 
-
-    console.log(classes)
     return ( 
     <> 
     {open && (
@@ -34,7 +32,7 @@ const Card = ({open, setOpen}) => {
                         <span class="material-icons">attach_money</span>
                     </span>
                     <span className={classes.content_count}>
-                        <i  onClick={onClickUp} className={`material-icons ${classes.up}`} >arrow_drop_up</i>  
+                        <i  onClick={onClickUp} className="material-icons up">arrow_drop_up</i>  
                         <span className={classes.count_value}>{count}</span>
                         <i onClick={onClickDown} className="material-icons down">arrow_drop_down</i>
                     </span>
